@@ -47,12 +47,13 @@ class Song
     end
   end
 
-def self.alphabetical
+  def self.alphabetical
   self.all.sort_by do |song|
     song.name
   end
-end
-
+  end
+  
+  def self.
 
  
 end
