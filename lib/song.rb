@@ -53,14 +53,18 @@ class Song
   end
   end
   
-  def self.new_from_filename(name)
+  def self.new_from_filename(file_name)
     song = self.new
-    files = file_name.split(" - ")
+    files = file_name.split("-")
     song.artist_name = files[0]
     song.name = files[1].sub(/.mp3/,'')
     song
   end
   
-  
+  def self.create_from_filename(file_name)
+    song = self.new_from_filename(file_name)
+    self.all << song
+    song  
+  end
  
 end
